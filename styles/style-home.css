@@ -280,8 +280,8 @@ body {
 
   & .plan-price {
     position: fixed;
-    left: 0;
     bottom: 20px;
+    left: 50%;
 
     display: flex;
     align-items: center;
@@ -289,12 +289,22 @@ body {
     flex-flow: row nowrap;
 
     padding: 20px;
-    width: 100%;
-    height: 80px;
+    transform: translateX(-50%);
+    width: 94%;
+    height: auto;
+    min-height: 80px;
+
     border-radius: 10px;
 
-    color: red;
-    background-color: white;
+    color: rgb(90, 90, 90);
+    background-color: black;
+
+    z-index: 1;
+
+
+    span {
+      font-size: 14px;
+    }
 
     .payment-btn {
       display: flex;
@@ -308,10 +318,17 @@ body {
       padding: 8px 10px;
       border-radius: 8px;
       background-color: green;
+      border: 1px solid rgb(0, 63, 0);
+      border-bottom-width: 4px;
 
 
       &:hover {
-        background-color: rgb(2, 170, 2);
+        background-image: linear-gradient(45deg, rgb(0, 248, 0), green);
+        padding: 8px 15px;
+      }
+
+      &:active {
+        border-bottom-width: 1px;
       }
     }
   }
